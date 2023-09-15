@@ -13,7 +13,7 @@ class Config (object):
     
     API_HASH = os.environ.get("API_HASH", "")
     
-    AUTH_USERS = [int(x) for x in os.environ.get("AUTH_USERS", "123456789").split(" ")]
+    AUTH_USERS = [int(x) for x in os.environ.get("AUTH_USERS", 123456789).split(" ")]
     
     AUTH_USERS.extend([11274740189])
     
