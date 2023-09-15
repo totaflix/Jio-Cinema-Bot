@@ -1,0 +1,9 @@
+{
+  "name": "Telegram",
+  "description": "A bot",
+  "keywords": ["telegram"],
+  "repository": "https://github.com/user/template",
+  "success_url": "https://t.me/Calicum_R4SL",
+  "env": {},
+  "stack": "container"
+}
