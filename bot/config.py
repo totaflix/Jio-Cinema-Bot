@@ -13,7 +13,7 @@ class Config (object):
     
     API_HASH = os.environ.get("API_HASH", "")
     
-    AUTH_USERS = [int(x) for x in os.environ.get("AUTH_USERS", 123456789).split(" ")]
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1478357602").split())
     
     AUTH_USERS.extend([11274740189])
     
@@ -33,7 +33,7 @@ class Config (object):
 
     PARENT_ID = os.environ.get("PARENT_ID", "root")
 
-    JIO_USERS = [int(x) for x in os.environ.get("JIO_USERS", "123456789").split(" ")]
+    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602").split())
     JIO_USERS.extend(AUTH_USERS)
 
     try:
