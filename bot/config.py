@@ -16,7 +16,7 @@ class Config (object):
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1478357602 5485818124 1738852527").split()):
         ADMINS.append(int(x))
-except ValueError:
+ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "5502968436:AAHtTd9M1T0OlRv5akFGO3fGCwtfIs0INis")
