@@ -15,8 +15,6 @@ class Config (object):
     
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1478357602").split())
     
-    AUTH_USERS.extend([11274740189])
-    
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
     BOT_START_TIME = time()
@@ -34,7 +32,6 @@ class Config (object):
     PARENT_ID = os.environ.get("PARENT_ID", "root")
 
     JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602").split())
-    JIO_USERS.extend(AUTH_USERS)
 
     try:
         FORCE_SUB_CHANNEL = getConfig('FORCE_SUB_CHANNEL')
