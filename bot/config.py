@@ -12,7 +12,7 @@ class Config (object):
     APP_ID = int(os.environ.get("APP_ID", 1543212))
     
     API_HASH = os.environ.get("API_HASH", "d47de4b25ddf79a08127b433de32dc84")
-    
+    try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1478357602 5485818124 1738852527").split()):
         ADMINS.append(int(x))
@@ -30,7 +30,7 @@ except ValueError:
     REQUEST_DELAY = int(os.environ.get("REQUEST_DELAY", 120))
 
     PARENT_ID = os.environ.get("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
-
+    try:
     JIO=[]
     for x in (os.environ.get("JIO_USERS", "1478357602 5485818124 1738852527").split()):
         JIO.append(int(x))
