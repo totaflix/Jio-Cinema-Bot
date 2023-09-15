@@ -17,7 +17,7 @@ class Config (object):
         for x in (os.environ.get("ADMINS", "1478357602").split()):
             ADMINS.append(int(x))
     except ValueError:
-            raise Exception("Your Admins list does not contain valid integers.")
+           raise Exception("Your Admins list does not contain valid integers.")
 
                         
 
@@ -37,7 +37,7 @@ class Config (object):
         for x in (os.environ.get("JIO_USERS", "1478357602 5485818124 1738852527").split()):
             JIO.append(int(x))
     except ValueError:
-            raise Exception("Your Jio users list does not contain valid integers.")
+           raise Exception("Your Jio users list does not contain valid integers.")
 
     try:
         FORCE_SUB_CHANNEL = getConfig('FORCE_SUB_CHANNEL')
