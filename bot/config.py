@@ -13,8 +13,12 @@ class Config (object):
     
     API_HASH = os.environ.get("API_HASH", "d47de4b25ddf79a08127b433de32dc84")
     
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1478357602 5485818124 1738852527").split())
-    
+    ADMINS=[]
+    for x in (os.environ.get("ADMINS", "1478357602 5485818124 1738852527").split()):
+        ADMINS.append(int(x))
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")
+
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "5502968436:AAHtTd9M1T0OlRv5akFGO3fGCwtfIs0INis")
 
     BOT_START_TIME = time()
@@ -27,7 +31,11 @@ class Config (object):
 
     PARENT_ID = os.environ.get("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
 
-    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602 5502968436 1738852527").split())
+    JIO=[]
+    for x in (os.environ.get("JIO_USERS", "1478357602 5485818124 1738852527").split()):
+        JIO.append(int(x))
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")
 
     try:
         FORCE_SUB_CHANNEL = getConfig('FORCE_SUB_CHANNEL')
