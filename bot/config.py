@@ -27,7 +27,7 @@ class Config (object):
 
     PARENT_ID = os.environ.get("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
 
-    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602, 5502968436 , 1738852527").split())
+    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602 5502968436 1738852527").split())
 
     try:
         FORCE_SUB_CHANNEL = getConfig('FORCE_SUB_CHANNEL')
