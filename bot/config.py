@@ -9,29 +9,25 @@ def getConfig(name: str):
 
 class Config (object):
     
-    APP_ID = int(os.environ.get("APP_ID", 0))
+    APP_ID = int(os.environ.get("APP_ID", 1543212))
     
-    API_HASH = os.environ.get("API_HASH", "")
+    API_HASH = os.environ.get("API_HASH", "d47de4b25ddf79a08127b433de32dc84")
     
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1478357602").split())
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1478357602, 5485818124").split())
     
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5502968436:AAHtTd9M1T0OlRv5akFGO3fGCwtfIs0INis")
 
     BOT_START_TIME = time()
     
-    DB_URI = os.environ.get("DATABASE_URL", "")
+    DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://gtm:gtm@cluster0.mc904kw.mongodb.net/?retryWrites=true&w=majority")
 
     DEFAULT_THUMB = os.environ.get("DEFAULT_THUMB", "https://placehold.it/90x90")
-    
-    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", '')
-
-    HEROKU_APP_NAME = os.environ.get('HEROKU_APP_NAME', '')
 
     REQUEST_DELAY = int(os.environ.get("REQUEST_DELAY", 120))
 
-    PARENT_ID = os.environ.get("PARENT_ID", "root")
+    PARENT_ID = os.environ.get("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
 
-    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602").split())
+    JIO_USERS = set(int(x) for x in os.environ.get("JIO_USERS", "1478357602, 5502968436").split())
 
     try:
         FORCE_SUB_CHANNEL = getConfig('FORCE_SUB_CHANNEL')
