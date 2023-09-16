@@ -21,7 +21,7 @@ RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key 
 RUN sh -c 'echo "deb https://mkvtoolnix.download/debian/ buster main" >> /etc/apt/sources.list.d/bunkus.org.list' && \
     sh -c 'echo deb http://deb.debian.org/debian buster main contrib non-free | tee -a /etc/apt/sources.list' && apt update && apt install -y mkvtoolnix
 
-RUN apt-get -qq install -y python3 python3-pip ffmpeg git yt-dlp aria2
+RUN apt-get -y update && apt-get -qq install -y --no-install-recommends python3 python3-pip ffmpeg git yt-dlp aria2
 
 
 # COPY requirements.txt .
