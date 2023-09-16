@@ -2,7 +2,6 @@
 
 
 import math
-import heroku3
 import requests
 import asyncio
 import time
