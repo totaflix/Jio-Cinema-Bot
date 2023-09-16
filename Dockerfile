@@ -13,7 +13,7 @@ ENV TZ=Asia/Kolkata
 RUN apt-get -qq install wine
 RUN dpkg --add-architecture i386 
 RUN apt-get -qq update 
-RUN apt-get -qq -y install wine32 winbind wine64 wget python3 python3-pip ffmpeg git yt-dlp aria2
+RUN apt-get -qq -y install wine32 winbind wine64 wget python3 python3-pip ffmpeg git aria2
 
 # For mkvmerge
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
