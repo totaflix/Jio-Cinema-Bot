@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM python:3.9.5-slim-buster
 
 RUN mkdir ./app
 RUN chmod 777 ./app
