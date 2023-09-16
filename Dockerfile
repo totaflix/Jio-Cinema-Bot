@@ -13,16 +13,13 @@ ENV TZ=Asia/Kolkata
 RUN apt-get -qq install wine
 RUN dpkg --add-architecture i386 
 RUN apt-get -qq update 
-RUN apt-get -qq -y install wine32 winbind wine64 wget
+RUN apt-get -qq -y install wine32 winbind wine64 wget python3 python3-pip ffmpeg git yt-dlp aria2
 
 # For mkvmerge
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
     wget -qO - https://ftp-master.debian.org/keys/archive-key-10.asc | apt-key add -
 RUN sh -c 'echo "deb https://mkvtoolnix.download/debian/ buster main" >> /etc/apt/sources.list.d/bunkus.org.list' && \
     sh -c 'echo deb http://deb.debian.org/debian buster main contrib non-free | tee -a /etc/apt/sources.list' && apt update && apt install -y mkvtoolnix
-
-RUN apt-get -y update && apt-get -qq install -y --no-install-recommends python3 python3-pip ffmpeg git yt-dlp aria2
-
 
 # COPY requirements.txt .
 # COPY run.sh .
