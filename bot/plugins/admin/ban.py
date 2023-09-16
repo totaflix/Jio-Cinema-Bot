@@ -8,7 +8,7 @@ from . import Config, User, LOGGER
 
 
 logger = LOGGER(__name__)
-db = User(Config.Jio_USERS)
+db = User(Config.JIO_USERS)
 
 
 @Client.on_message(filters.private & filters.command("ban_user") & filters.user(Config.AUTH_USERS), -1)
