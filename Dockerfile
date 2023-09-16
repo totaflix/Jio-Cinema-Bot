@@ -16,11 +16,10 @@ RUN apt-get -qq update
 RUN apt-get -qq -y install wine32 winbind wine64 wget
 
 # For mkvmerge
-RUN wget -O /usr/share/keyrings/gpg-pub-moritzbunkus.gpg https://mkvtoolnix.download/gpg-pub-moritzbunkus.gpg
-RUN echo "deb [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/ubuntu/ focal main" | tee /etc/apt/sources.list.d/mkvtoolnix.list
-RUN echo "deb-src [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/ubuntu/ focal main" | tee -a /etc/apt/sources.list.d/mkvtoolnix.list
-RUN apt-get update
-RUN apt-get -qq install mkvtoolnix
+RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
+    wget -qO - https://ftp-master.debian.org/keys/archive-key-10.asc | apt-key add -
+RUN sh -c 'echo "deb https://mkvtoolnix.download/debian/ buster main" >> /etc/apt/sources.list.d/bunkus.org.list' && \
+    sh -c 'echo deb http://deb.debian.org/debian buster main contrib non-free | tee -a /etc/apt/sources.list' && apt update && apt install -y mkvtoolnix
 
 RUN apt-get -qq install -y python3 python3-pip ffmpeg git yt-dlp aria2
 
