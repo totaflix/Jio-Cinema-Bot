@@ -23,7 +23,7 @@ class Bot(Client):
             api_id=Config.APP_ID,
             api_hash=Config.API_HASH,
             plugins={
-                "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG": "bot/plugins"
+                "root": "bot/plugins"
             },
             workers=400,
             bot_token=Config.BOT_TOKEN
