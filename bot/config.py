@@ -24,7 +24,7 @@ class Config:
     DEFAULT_THUMB = get_env_variable("DEFAULT_THUMB", "https://placehold.it/90x90")
     REQUEST_DELAY = get_env_variable("REQUEST_DELAY", 120, is_int=True)
     PARENT_ID = get_env_variable("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
-    JIO_USERS = get_env_variable("JIO_USERS", "1478357602 5485818124 1738852527").split()
+    JIO_USERS = get_env_variable("JIO_USERS", "1478357602 5485818124 1738852527 5603885669").split()
 
     # Handle boolean environment variables
     FORCE_SUB_CHANNEL = get_env_variable('FORCE_SUB_CHANNEL', 'false')
