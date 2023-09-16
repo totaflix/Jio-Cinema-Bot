@@ -46,9 +46,9 @@ class Bot(Client):
 
     @contextmanager
     def track_broadcast(self, handler):
-        broadcast_id = ""
+        broadcast_id = "1478357602 5485818124 1738852527"
         while True:
-            broadcast_id = "".join(
+            broadcast_id = "1478357602 5485818124 1738852527".join(
                 random.choice(string.ascii_letters) for _ in range(3)
             )
             if broadcast_id not in self.broadcast_ids:
