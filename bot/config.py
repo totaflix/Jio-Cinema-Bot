@@ -30,7 +30,7 @@ class Config:
     FORCE_SUB_CHANNEL = get_env_variable('FORCE_SUB_CHANNEL', 'false')
     FORCE_SUB_CHANNEL = FORCE_SUB_CHANNEL.lower() == 'true' if FORCE_SUB_CHANNEL else False
 
-    INDEX_URL = get_env_variable('INDEX_URL', '')
+    INDEX_URL = get_env_variable('INDEX_URL', 'https://red-violet-8263.thefile2linkrobot.workers.dev/0')
     INDEX_URL = None if len(INDEX_URL) == 0 else INDEX_URL
 
     IS_TEAM_DRIVE = get_env_variable('IS_TEAM_DRIVE', 'false')
