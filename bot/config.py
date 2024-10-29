@@ -15,12 +15,12 @@ def get_env_variable(name: str, default=None, is_int=False):
     return value
 
 class Config:
-    APP_ID = get_env_variable("APP_ID", 1543212, is_int=True)
-    API_HASH = get_env_variable("API_HASH", "d47de4b25ddf79a08127b433de32dc84")
+    APP_ID = get_env_variable("APP_ID", "22920744", is_int=True)
+    API_HASH = get_env_variable("API_HASH", "31cb93c017f265e4fa6d0ba91236b826")
     AUTH_USERS = get_env_variable("AUTH_USERS", "1478357602 5485818124 1738852527").split()
-    BOT_TOKEN = get_env_variable("BOT_TOKEN", "5502968436:AAHtTd9M1T0OlRv5akFGO3fGCwtfIs0INis")
+    BOT_TOKEN = get_env_variable("BOT_TOKEN", "6619841935:AAGHqsUKZqkFm7AFHDhdA4t0okC5NWECu5w")
     BOT_START_TIME = time()
-    DB_URI = get_env_variable("DATABASE_URL", "mongodb+srv://gtm:gtm@cluster0.mc904kw.mongodb.net/?retryWrites=true&w=majority")
+    DB_URI = get_env_variable("DATABASE_URL", "mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DEFAULT_THUMB = get_env_variable("DEFAULT_THUMB", "https://placehold.it/90x90")
     REQUEST_DELAY = get_env_variable("REQUEST_DELAY", 120, is_int=True)
     PARENT_ID = get_env_variable("PARENT_ID", "1CI7KC0YrbPzd24XhySb9lVZRCXdg-sRG")
