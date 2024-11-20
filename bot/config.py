@@ -18,7 +18,7 @@ class Config:
     APP_ID = get_env_variable("APP_ID", "22920744", is_int=True)
     API_HASH = get_env_variable("API_HASH", "31cb93c017f265e4fa6d0ba91236b826")
     AUTH_USERS = get_env_variable("AUTH_USERS", "1478357602 5485818124 1738852527").split()
-    BOT_TOKEN = get_env_variable("BOT_TOKEN", "7018409603:AAH3R8J307xT_XuNFw8bMtWckQ-5JSiBNuI")
+    BOT_TOKEN = get_env_variable("BOT_TOKEN", "7440808857:AAH8a5eYAbdhJTmy1-hER-gkzwYV7krZvso")
     BOT_START_TIME = time()
     DB_URI = get_env_variable("DATABASE_URL", "mongodb+srv://suproboiragi2:t4GwmmrWCkUcX3Ui@cluster0.nn4hh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DEFAULT_THUMB = get_env_variable("DEFAULT_THUMB", "https://placehold.it/90x90")
